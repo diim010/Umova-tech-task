@@ -1,0 +1,23 @@
+{
+  "name": "umova-tech-task",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diim010/Umova-tech-task.git"
+  },
+  "author": "diim010",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diim010/Umova-tech-task/issues"
+  },
+  "homepage": "https://github.com/diim010/Umova-tech-task#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.72.0"
+  }
+}
