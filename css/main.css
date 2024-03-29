@@ -1,3 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  background-color: #c3c3c3;
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body .wrap {
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+body .wrap h2 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 105.6px;
+  color: rgb(139, 150, 172);
+  margin-bottom: 0;
+}
+body .wrap h2 span {
+  color: rgb(42, 59, 83);
+}
+body .wrap p {
+  font-family: Hind;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(139, 150, 172);
+}
+body .wrap form {
+  width: 560px;
+}
+body .wrap form input[type=text],
+body .wrap form input[type=email],
+body .wrap form input[type=tel],
+body .wrap form input[type=password],
+body .wrap form select {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+body .wrap form input[type=checkbox] {
+  margin-right: 5px;
+}
+body .wrap form .password-container {
+  position: relative;
+}
+body .wrap form .view-password {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body .wrap form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+body .wrap form button:hover {
+  background-color: #45a049;
 }

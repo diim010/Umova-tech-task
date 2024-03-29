@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>test Form</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ <div class="wrap">
+    <h2>Reach Out and<br> <span>Connect</span> With Us</h2>
+    <p>Bridging Your Ideas with Our Expertise</p>
+    <form id="myForm" onsubmit="return validateForm()">
+        <input type="text" id="name" name="name" placeholder="Name"><br><br>
+
+        <input type="text" id="email" name="email" placeholder="Email"><span id="emailError" class="error"></span><br><br>
+
+        <input type="text" id="phone" name="phone" placeholder="Phone"><span id="phoneError" class="error"></span><br><br>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter your password">
+            <span class="view-password" onclick="togglePasswordVisibility()">
+                <img src="img/eye2.png" alt="View Password">
+            </span>
+        </div>
+        <input type="password" id="password" name="password" placeholder="Password"><br><br>
+        <select id="city" name="city"  required>
+            <option value="">Chose your city*</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+        </select><br>
+
+        <input type="checkbox" id="licenseAgreement" name="licenseAgreement" required>
+        <label for="licenseAgreement">I agree to the license agreement</label><br>
+        <input type="submit" value="Submit">
+    </form>
+ </div>
+
+<script>
+
+</script>
+<script src="js/common.js"></script>
+</body>
+</html>
