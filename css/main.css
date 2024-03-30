@@ -1,72 +1,264 @@
+@import '../node_modules/normalize.css/normalize.css';
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
-body {
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
+form .error {
+  font-size: 16px;
   font-weight: 400;
-  font-style: normal;
+  line-height: 25.6px;
+  text-align: left;
+  color: rgb(186, 91, 91);
 }
-body .wrap {
-  max-width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+form input:focus {
+  outline: 0 !important;
+  border-bottom: 1px solid rgb(88, 121, 239) !important;
 }
-body .wrap h2 {
-  font-size: 96px;
-  font-weight: 700;
-  line-height: 105.6px;
-  color: rgb(139, 150, 172);
-  margin-bottom: 0;
-}
-body .wrap h2 span {
-  color: rgb(42, 59, 83);
-}
-body .wrap p {
-  font-family: Hind;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  color: rgb(139, 150, 172);
-}
-body .wrap form {
-  width: 560px;
-}
-body .wrap form input[type=text],
-body .wrap form input[type=email],
-body .wrap form input[type=tel],
-body .wrap form input[type=password],
-body .wrap form select {
+form input[type=text],
+form input[type=email],
+form input[type=tel],
+form input[type=password],
+form select option,
+form select:first-child {
   width: 100%;
-  padding: 8px;
+  height: 50px;
   background-color: transparent;
-  margin-bottom: 10px;
   border-radius: 0;
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgb(42, 59, 83);
   box-sizing: border-box;
+  padding: 12px 20px 12px 20px;
+  gap: 10px;
+  opacity: 0px;
+  box-shadow: none;
 }
-body .wrap form input[type=checkbox] {
-  margin-right: 5px;
+form select:first-child {
+  color: rgb(139, 150, 172);
 }
-body .wrap form .password-container {
+form .password-container {
   position: relative;
 }
-body .wrap form .view-password {
+form .view-password {
   position: absolute;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-body .wrap form button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgb(42, 59, 83);
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: -1px;
+  width: 5.5px;
+  height: 9.27px;
+  border: solid rgb(42, 59, 83);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+select,
+option {
+  background-color: #fff !important;
+}
+
+body {
+  font-family: "Hind", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(139, 150, 172);
+}
+
+a {
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  color: rgb(42, 59, 83);
+}
+a:hover {
+  color: rgb(139, 150, 172);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Overpass", sans-serif;
+}
+
+h2 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 105.6px;
+}
+
+input[type=text],
+input[type=email], input[type=tel],
+input[type=password],
+input::placeholder,
+select option,
+select:first-child {
+  font-family: "Hind", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(139, 150, 172);
+}
+
+@media (max-width: 575.98px) {
+  p,
+  a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  h2 {
+    font-size: 42px;
+    line-height: 54px;
+  }
+  input[type=text],
+  input[type=email], input[type=tel],
+  input[type=password],
+  input::placeholder,
+  select option,
+  select:first-child {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  p,
+  a {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+@media (max-width: 991.98px) {
+  p,
+  a {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  h2 {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body .wrap h2 {
+  margin-bottom: 0;
+}
+body .wrap h2 span {
+  color: rgb(42, 59, 83);
+}
+body .wrap form .form-row {
+  margin-top: 20px;
+  max-width: 100%;
+}
+body .wrap form .submit-row {
+  display: flex;
+  align-items: center;
+}
+body .wrap form .submit-row label {
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  color: rgb(139, 150, 172);
+}
+body .wrap form .submit-row input[type=submit] {
+  font-family: "Overpass", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 2px solid rgb(88, 121, 239);
+  box-shadow: none;
+  margin-left: auto;
   cursor: pointer;
 }
-body .wrap form button:hover {
-  background-color: #45a049;
+
+@media (max-width: 575.98px) {
+  .wrap {
+    margin: 20px;
+  }
+  .submit-row {
+    flex-direction: column;
+  }
+}
+@media (min-width: 575.98px) {
+  .form-row {
+    width: 560px;
+  }
 }

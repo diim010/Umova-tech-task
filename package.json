@@ -18,6 +18,10 @@
   "homepage": "https://github.com/diim010/Umova-tech-task#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.72.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
